@@ -29,3 +29,12 @@ steps:
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+
+- task: KubernetesManifest@1
+  inputs:
+    action: 'deploy'
+    connectionType: 'kubernetesServiceConnection'
+    namespace: 'qal'
+    strategy: 'canary'
+    percentage: '0'
+    manifests: 'manifest.yml'
