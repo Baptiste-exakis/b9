@@ -35,4 +35,4 @@ steps:
     namespace: 'qal'
     strategy: 'canary'
     percentage: '0'
-    manifests: 'manifest.yml'
+    manifests: '**/infra/*'
